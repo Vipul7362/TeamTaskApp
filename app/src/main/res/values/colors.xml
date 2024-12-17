@@ -1,0 +1,12 @@
+<resources>
+    <color name="colorPrimary">#6200EE</color> <!-- Your primary color -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- Dark variant of primary -->
+    <color name="colorAccent">#03DAC5</color> <!-- Your accent color -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gold">#FFD700</color> <!-- Example custom color -->
+    <color name="hint_color">#A9A9A9</color>
+    <color name="gray">#686262</color>
+    <color name="colorjoin">#CDDC39</color>
+
+</resources>

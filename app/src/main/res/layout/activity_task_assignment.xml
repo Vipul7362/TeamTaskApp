@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@android:color/white">
+
+    <!-- Task Name -->
+    <TextView
+        android:id="@+id/taskNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/taskNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter task name"
+        android:inputType="text"
+        android:elevation="4dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        app:layout_constraintTop_toBottomOf="@id/taskNameLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Assigned To -->
+    <TextView
+        android:id="@+id/assignedToLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assign To"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/taskNameEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/assignedToEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter member email"
+        android:inputType="textEmailAddress"
+        android:elevation="4dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        app:layout_constraintTop_toBottomOf="@id/assignedToLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Priority -->
+    <TextView
+        android:id="@+id/priorityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Priority"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/assignedToEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Spinner
+        android:id="@+id/prioritySpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/priorityLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Due Date -->
+    <TextView
+        android:id="@+id/dueDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Due Date"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/prioritySpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/dueDateEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Select due date"
+        android:inputType="none"
+        android:focusable="false"
+        android:elevation="4dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        app:layout_constraintTop_toBottomOf="@id/dueDateLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/descriptionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/dueDateEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/descriptionEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter task description"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:maxLines="5"
+        android:elevation="4dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        app:layout_constraintTop_toBottomOf="@id/descriptionLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Assign Task Button -->
+    <Button
+        android:id="@+id/assignTaskButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Assign Task"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@drawable/rounded_button"
+        android:padding="12dp"
+        android:elevation="6dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/descriptionEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <!-- View Task Button -->
+    <Button
+        android:id="@+id/viewTaskButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="View Task"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@drawable/rounded_button_accent"
+        android:padding="12dp"
+        android:elevation="6dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/assignTaskButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

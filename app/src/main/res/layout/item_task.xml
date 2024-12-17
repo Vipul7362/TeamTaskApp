@@ -1,0 +1,48 @@
+<!-- item_task.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"> <!-- Added padding for better spacing -->
+
+    <TextView
+        android:id="@+id/taskName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp" /> <!-- Added text style and size -->
+
+    <TextView
+        android:id="@+id/assignedTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp" />
+
+    <!-- New TextView for task description -->
+    <TextView
+        android:id="@+id/taskDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:paddingTop="4dp"
+        android:visibility="gone" /> <!-- Default visibility set to gone -->
+
+    <Button
+        android:id="@+id/updateStatusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Status"/>
+</LinearLayout>
